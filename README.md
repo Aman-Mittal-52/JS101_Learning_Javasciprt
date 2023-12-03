@@ -1,6 +1,6 @@
 # JS101_Learning_Javasciprt
 
-## Authors
+## Author
 
 - [GitHub --> @Aman-Mittal-52](https://www.github.com/Aman-Mittal-52)
 - [Linkdin](https://www.linkedin.com/in/aman-mittal-22833b288/)
@@ -9,7 +9,7 @@
 I'm a full stack developer...
 
 ### Week 1 
-   #### Basic Javascript 
+#### Basic Javascript 
   - Day 1 -->  Programs of Introduction to JS(variables)
   - Day 2 -->  Mathamatical programs
   - Day 3 -->  Conditional Statement
