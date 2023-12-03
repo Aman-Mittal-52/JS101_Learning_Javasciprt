@@ -8,8 +8,8 @@
 ## 🚀 About Me
 I'm a full stack developer...
 
-### Week 1 
-#### Basic Javascript 
+### Basic Javascript
+#### Week 1 
   - Day 1 -->  Programs of Introduction to JS(variables)
   - Day 2 -->  Mathamatical programs
   - Day 3 -->  Conditional Statement
@@ -18,6 +18,8 @@ I'm a full stack developer...
   - Day 6 -->  Array & String
   - Day 7 -->  Nested Loops
 
+#### Week 2
+  - Day 8 --> Objects
 
 ## Support
 
