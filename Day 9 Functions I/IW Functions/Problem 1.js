@@ -1,8 +1,4 @@
-
-// Author : Aman Mittal
-// Linkdin : https://www.linkedin.com/in/aman-mittal-22833b288/
-
-// PROBLEM 1
+c
 // Problem 1: Create a function to check if a number is Prime or Not
 
 function isprime(Num){

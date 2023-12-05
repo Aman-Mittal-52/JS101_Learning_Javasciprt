@@ -24,6 +24,7 @@ I'm a full stack developer...
 #### Week 2
   - Day 8 --> Objects
   - Day 9 --> Functions I
+  - Day 10 --> Functions II (Method Clones)
   
 ## Support
 
