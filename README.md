@@ -1,6 +1,9 @@
 # JS101_Learning_Javasciprt
 
-## Author
+Welcome to **JS101 Learning Javascript**, an immersive and meticulously crafted learning experience designed to empower you with foundational skills and comprehensive knowledge essential for mastering JavaScript in 2023. 🌟 Whether you're stepping into the coding universe for the first time or leveling up your skills, 
+** join Aman Mittal, a passionate full-stack developer, on an exhilarating journey through the magical realms of JavaScript. 🚀✨ * 
+
+**Author**
 
 - [GitHub --> @Aman-Mittal-52](https://www.github.com/Aman-Mittal-52)
 - [Linkdin](https://www.linkedin.com/in/aman-mittal-22833b288/)
@@ -20,7 +23,8 @@ I'm a full stack developer...
 
 #### Week 2
   - Day 8 --> Objects
-
+  - Day 9 --> Functions I
+  
 ## Support
 
 For support, E-mail --> amanmittle1234@gmail.com
