@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Nova+Square&family=Open+Sans&display=swap');
+
+        *::selection {
+            color: white;
+            /* background-color: white; */
+
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+
+        #container {
+            width: 60%;
+            padding: 60px;
+            border-radius: 40px;
+
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+        }
+
+        .digit {
+            font-size: 150px;
+            font-weight: bold;
+            padding: 5px;
+            font-family: 'Lexend', sans-serif;
+            color: #fffFff;
+        }
+
+        .txt {
+            font-size: 50px;
+            font-family: 'Nova Square', sans-serif;
+        }
+
+        #count {
+            font-size: 90px;
+        }
+
+        .btn-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 18px 55px;
+            font-size: x-large;
+            margin: 0PX 30PX;
+            border-radius: 30px;
+            background-color: #0093E9;
+            border: NONE;
+            color: #ffff;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+            background-color: gainsboro;
+        }
+
+        .btn:hover {
+            color: black;
+            scale: 1.1;
+            background-color: #8EC5FC;
+            background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+        }
+        .btn:active{
+            transform:translate(2px , 2px);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="time">
+            <span class="digit" id="hr">00</span>
+            <span class="txt">Hr</span>
+            <span class="digit" id="min">00</span>
+            <span class="txt">min</span>
+            <span class="digit" id="sec">00</span>
+            <span class="txt">sec</span>
+            <span class="digit" id="count">00</span>
+        </div>
+        <div class="btn-container">
+            <button class="btn" id="start" onclick="start()">Start</button>
+            <button class="btn" id="stop" onclick="stop()">Stop</button>
+            <button class="btn" id="reset" onclick="reset()">Reset</button>
+        </div>
+    </div>
+</body>
+<script>
+    let hr = 0;
+    let min = 0;
+    let sec = 0;
+    let count = 0;
+
+    let timer = false;
+
+    function start() {
+        timer = true;
+        stopWatch()
+    }
+
+    function stop() {
+        timer = false;
+    }
+
+    function reset() {
+        timer = false;
+        hr = 0;
+        min = 0;
+        sec = 0;
+        count = 0;
+
+        document.getElementById("count").textContent = "00";
+        document.getElementById("sec").textContent = "00";
+        document.getElementById("min").textContent = "00";
+        document.getElementById("hr").textContent = "00";
+    }
+
+    function stopWatch() {
+        if (timer == true) {
+            count++;
+
+            if (count == 100) {
+                sec++;
+                count = 0;
+            }
+
+            if (sec == 60) {
+                min++;
+                sec = 0;
+            }
+
+            if (min == 60) {
+                hr++;
+                min = 0;
+                sec = 0;
+            }
+
+            let hrStr = hr;
+            let minStr = min;
+            let secStr = sec;
+            let countStr = count;
+            if (hr < 10) {
+                hrStr = "0" + hrStr;
+            }
+
+            if (min < 10) {
+                minStr = "0" + minStr;
+            }
+
+            if (sec < 10) {
+                secStr = "0" + secStr
+            }
+
+            document.getElementById("count").textContent = countStr;
+            document.getElementById("sec").textContent = secStr;
+            document.getElementById("min").textContent = minStr;
+            document.getElementById("hr").textContent = hrStr;
+            setTimeout(() => {
+                stopWatch()
+            }, 10)
+        }
+    }
+</script>
+
+</html>
