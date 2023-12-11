@@ -4,43 +4,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
     orderBtn.addEventListener("click", () => {
         const selectedItems = Array.from(document.querySelectorAll('.itemBox input:checked')).map(input => input.value);
-        if(selectedItems.length == 0){
+        if (selectedItems.length == 0) {
             alert("Thanks for playing with the button..Now order something :)")
         }
-        else(
+        else (
             orderfood(selectedItems)
         )
     });
-    
+
     function orderfood(selectedItems) {
-        let promise = new Promise((resolve)=>{
-            const randomSeconds = Math.floor(Math.random()*5)+1 ;
-            setTimeout(()=>{
-                if(selectedItems.includes("burger" && "fries" && "drinks")){
+        let promise = new Promise((resolve) => {
+            const randomSeconds = Math.floor(Math.random() * 5) + 1;
+            setTimeout(() => {
+                if (selectedItems.includes("burger" && "fries" && "drinks")) {
                     alert("all");
                 }
-                else if(selectedItems.includes("burger"&&"fries")){
+                else if (selectedItems.includes("burger" && "fries")) {
                     alert("sukha")
                 }
-                else if(selectedItems.includes("burger" && "drinks")){
+                else if (selectedItems.includes("burger" && "drinks")) {
                     alert("no allu")
                 }
-                else if(selectedItems.includes("fries"&& "drinks")){
+                else if (selectedItems.includes("fries" && "drinks")) {
                     alert("happy")
                 }
-                else if(selectedItems.includes("burger")){
+                else if (selectedItems.includes("burger")) {
                     alert("burbur")
                 }
-                else if(selectedItems.includes("fries")){
+                else if (selectedItems.includes("fries")) {
                     alert("furfur")
                 }
-                else if(selectedItems.includes("drinks")){
+                else if (selectedItems.includes("drinks")) {
                     alert("gugu")
                 }
-                else{
+                else {
                     alert("gdr")
                 }
-            },randomSeconds * 1000);
+            }, randomSeconds * 1000);
 
         });
         return promise;
