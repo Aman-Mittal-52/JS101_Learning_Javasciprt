@@ -65,6 +65,10 @@ body {
     border: 1px solid blue;
 }
 
+#foodjpg {
+    width: 100%;
+}
+
 #orderBtn {
     margin: 10px 500px 0px;
     font-size: 40px;
@@ -88,14 +92,17 @@ body {
 }
 
 #orderBtn:hover {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    ;
     transform:
-        translate3d(0px,16px, 0px) rotateX(1deg) rotateZ(-3deg);
+        translate3d(0px, 16px, 0px) rotateX(1deg) rotateZ(-1deg);
     box-shadow:
         1px 1px 0 1px #f9f9fb,
         -1px 0 28px 0 rgba(34, 33, 81, 0.01),
         54px 54px 28px -10px rgba(34, 33, 81, 0.15);
 }
 
-#orderBtn:active{
-    transform: translate3d(0px , -59px ,0px) rotateZ(-2deg) scale(2);
+#orderBtn:active {
+    transform: translate3d(0px, -59px, 0px) rotateZ(-2deg) scale(1.4);
 }
