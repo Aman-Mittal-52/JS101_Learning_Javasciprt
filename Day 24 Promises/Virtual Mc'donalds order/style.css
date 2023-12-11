@@ -28,7 +28,7 @@ body {
     }
 
     background: linear-gradient(to right, #FEBB07, #db0007);
-    background-image: radial-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     background: radial-gradient(at right top, #E3C55F, #E6191E);
 }
 
@@ -62,11 +62,12 @@ body {
     width: 600px;
     height: 300px;
     margin-right: 80px;
-    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
 }
 
 #foodjpg {
-    width: 100%;
+    height: 100%;
 }
 
 #orderBtn {
@@ -87,14 +88,12 @@ body {
         -1px 0 28px 0 rgba(34, 33, 81, 0.01),
         28px 28px 28px 0 rgba(34, 33, 81, 0.25);
     transition:
-        .2s ease-in-out transform,
+        .1s ease-in-out transform,
         .4s ease-in-out box-shadow;
 }
 
 #orderBtn:hover {
     background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-    ;
     transform:
         translate3d(0px, 16px, 0px) rotateX(1deg) rotateZ(-1deg);
     box-shadow:
@@ -104,5 +103,5 @@ body {
 }
 
 #orderBtn:active {
-    transform: translate3d(0px, -59px, 0px) rotateZ(-2deg) scale(1.4);
+    transform: translate3d(0px, -19px, 0px) rotateZ(-2deg) scale(1.5);
 }
