@@ -25,6 +25,7 @@ I'm a full stack developer...
   - Day 8 --> Objects
   - Day 9 --> Functions I
   - Day 10 --> Functions II (Method Clones)
+  - Day 11 --> Object Method
   
 ## Support
 
