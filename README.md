@@ -26,6 +26,27 @@ I'm a full stack developer...
   - Day 9 --> Functions I
   - Day 10 --> Functions II (Method Clones)
   - Day 11 --> Object Method
+  - Day 12 --> 
+  - Day 13 --> 
+  - Day 14 --> 
+
+#### Week 3
+  - Day 15 --> 
+  - Day 16 --> 
+  - Day 17 --> 
+  - Day 18 --> 
+  - Day 19 --> 
+  - Day 20 --> 
+  - Day 21 -->
+
+#### Week 4
+  - Day 22 --> 
+  - Day 23 --> Async Programming
+  - Day 24 --> Promises
+  - Day 25 -->
+  - Day 26 --> 
+  - Day 27 --> 
+  - Day 28 -->  
   
 ## Support
 

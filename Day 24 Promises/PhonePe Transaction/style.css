@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 50px;
+}
+
+.container {
+    width: 100%;
+    padding: 50px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 40px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.nav {
+    width: 60%;
+    height: auto;
+    border-radius: 50px;
+    padding: 30px;
+    background-color: #fff;
+}
+
+.nav h1 {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 60px;
+    color: #4158D0;
+}
+
+.nav h5 {
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+    margin: 10px 0px 80px;
+}
+
+.inputBox {
+    position: relative;
+    margin: 20px;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 1px solid rgba(225, 225, 225, 0.25);
+    outline: none;
+    color: #000000;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    pointer-events: none;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+.inputBox input:valid~span,
+.inputBox input:focus~span {
+    transform: translateX(10px) translateY(-7px);
+    font-size: 20px;
+    padding: 0px 10px;
+    background-color: #fff;
+    color: #4158D0;
+}
+
+#btnDiv {
+    display: flex;
+    justify-content: center;
+
+    >button {
+        font-size: 30px;
+        padding: 15px 50px;
+        cursor: pointer;
+        border-radius: 10px 40px / 40px;
+        background-color: #1aab00;
+        color: #fff;
+    }
+
+    >button:hover {
+        transform: translate(2px, 2px);
+    }
+
+    >button:active {
+        transform: translate(4px, 6px);
+    }
+}
+
+.screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    border-radius: 50px;
+    background-color: #fff;
+}
+
+
+#payDiv {
+    text-align: center;
+
+    >h3 {
+        font-family: 'Poppins', sans-serif;
+    }
+}
+
+.loader {
+    border: 8px solid #d1d1d1;
+    border-top: 8px solid #26b445;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.success_fail_Heading{
+    font-family: 'Poppins', sans-serif;
+}
