@@ -1,0 +1,36 @@
+
+<!--
+    Code Author -> Aman Mittal
+    Linkdin : https://www.linkedin.com/in/aman-mittal-22833b288/ 
+-->
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Showing Alerts</title>
+	</head>
+	<body>
+		<button onclick="showFirstName()">Aman</button>
+		<button onclick="showLastName()">Mittal</button>
+		<button onclick="showFullName()">Aman Mittal</button>
+		<script type="text/javascript">
+            function showFirstName() {
+			    // Complete to show an alert with your first name 
+                alert(document.querySelector("body > button:nth-child(1)").textContent)
+			}
+
+            function showLastName() {
+                // Complete to show an alert with your last name    
+                alert(document.querySelector("body > button:nth-child(2)").textContent)         
+            }
+
+            function showFullName() {
+                // Complete to show an alert with your full name (firstname lastname)
+                alert(document.querySelector("body > button:nth-child(3)").textContent)
+                                
+            }
+
+        </script>
+	</body>
+</html>

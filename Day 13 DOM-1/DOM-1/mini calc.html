@@ -1,0 +1,87 @@
+
+<!--
+    Code Author -> Aman Mittal
+    Linkdin : https://www.linkedin.com/in/aman-mittal-22833b288/ 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            background-color: rgb(180, 135, 77);
+            width: 50%;
+            height: 200px;
+            margin: auto;
+        }
+
+        #inputs{
+            width: 80%;
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+            background-color: rgb(72, 99, 136);
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        #functions{
+            width: 50%;
+            margin: auto;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-gap: 60px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="inputs">
+            <input type="number" id="input1" placeholder="enter 1st Number">
+            <input type="number" id="input2" placeholder="enter 2nd Number">
+        </div>
+        <div id="functions">
+            <button onclick="add()">Add</button>
+            <button onclick="sub()">Subtract</button>
+            <button  onclick="Multi()">Multiply</button>
+            <button onclick="divide()()">Divide</button>
+        </div>
+    </div>
+    <script>
+        function add(){
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            let result = Number(input1) + Number(input2);
+            alert("Your Answer is "+result);
+        }
+
+        function sub(){
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            let result = Number(input1) - Number(input2);
+            alert("Your Answer is "+result);
+        }
+
+        function Multi(){
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            let result = Number(input1) * Number(input2);
+            alert("Your Answer is "+result);
+        }
+
+        function divide(){
+            let input1 = document.getElementById("input1").value;
+            let input2 = document.getElementById("input2").value;
+            let result = Number(input1) / Number(input2);
+            alert("Your Answer is "+result);
+        }
+    </script>
+</body>
+</html>

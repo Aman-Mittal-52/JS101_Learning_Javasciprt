@@ -121,4 +121,117 @@
 
 </script>
 ```
--Design an application such that when user clicks on Apply button, he should take entered values from both input and select tags and display it in h2 tag with id "display"
+- Design an application such that when user clicks on Apply button, he should take entered values from both input and select tags and display it in h2 tag with id "display"
+
+
+## DOM -1 
+
+### Mini Calc
+- Create a mini calculator application, which has following functionalities 
+  - Addition
+  - Subtraction
+  - Division
+  - Multiplication
+
+- Your app should have
+    - Two input boxes which should take two numbers from the user.
+    - Four Buttons with following text content
+      - Add
+      - Subtract
+      - Divide
+      - Multiply
+
+
+- When user enter 2 and 4 and clicks on multiply button, an alert should come with 8 as ans
+- When user enter 8 and 4 and clicks on Divide button,an alert should come with 2 as ans
+
+<img src="https://i.imgur.com/NnT7dfp.png">
+
+
+### Registeration
+
+- Complete all the functions by creating a copy of the above template with the file name 'registration.html'
+```<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<input type="text" name="name" id="name">
+	<select id="gender">
+		<option value="">--</option>
+		<option value="male">M</option>
+		<option value="female">F</option>
+	</select>
+	<input type="text" name="email" id="email">
+	<input type="text" name="mobile" id="mobile">
+	<hr>
+	<h1 id="dName">NAME</h1>
+	<h2 id="dGender">GENDER</h2>
+	<h3 id="dEmail">EMAIL</h3>
+	<h4 id="dMobile">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetForm()">RESET FORM</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+		function showName() {
+			// Show filled name inside h1
+		}
+
+		function showGender() {
+			// Show the selected gender inside h2
+		}
+
+		function showEmail() {
+			// Show the filled email inside h3
+		}
+
+		function showMobile() {
+			// Show the filled mobile inside h4
+		}
+
+		function resetForm() {
+			// Reset all the form elements to default values (blank "")
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+		}
+	</script>
+</body>
+</html>
+```
+
+### Alerts
+
+- Complete all the functions by creating a copy of the above template with the file name alerts.html
+```<!DOCTYPE html>
+<html>
+	<head>
+		<title>Showing Alerts</title>
+	</head>
+	<body>
+		<button onclick="showFirstName()">FIRSTNAME</button>
+		<button onclick="showLastName()">LASTNAME</button>
+		<button onclick="showFullName()">FIRSTNAME NAME</button>
+		<script type="text/javascript">
+            function showFirstName() {
+			    // Complete to show an alert with your first name 
+			}
+
+            function showLastName() {
+                // Complete to show an alert with your last name             
+            }
+
+            function showFullName() {
+                // Complete to show an alert with your full name (firstname lastname)
+                                
+            }
+        </script>
+	</body>
+</html>
+```
