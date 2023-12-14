@@ -26,9 +26,11 @@ I'm a full stack developer...
   - Day 9 --> Functions I
   - Day 10 --> Functions II (Method Clones)
   - Day 11 --> Object Method
-  - Day 12 --> 
+  - Day 12 --> Higher Order Functions (H.O.F)
   - Day 13 --> 
   - Day 14 --> 
+
+### Advanced Javascript
 
 #### Week 3
   - Day 15 --> 
@@ -47,7 +49,7 @@ I'm a full stack developer...
   - Day 26 --> 
   - Day 27 --> 
   - Day 28 -->  
-  
+
 ## Support
 
 For support, E-mail --> amanmittle1234@gmail.com
