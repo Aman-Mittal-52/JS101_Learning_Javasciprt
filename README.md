@@ -27,7 +27,7 @@ I'm a full stack developer...
   - Day 10 --> Functions II (Method Clones)
   - Day 11 --> Object Method
   - Day 12 --> Higher Order Functions (H.O.F)
-  - Day 13 --> 
+  - Day 13 --> Document Object Model - 1 (DOM-1)
   - Day 14 --> 
 
 ### Advanced Javascript
