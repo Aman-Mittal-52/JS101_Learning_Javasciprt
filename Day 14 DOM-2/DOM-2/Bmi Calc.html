@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BMI Calculator</title>
+    <link rel="icon" href="https://www.pngall.com/wp-content/uploads/2018/04/Body-High-Quality-PNG.png">
+</head>
+<body>
+    <!-- Code Author - Aman Mittal -->
+    <!-- Linkedin - https://www.linkedin.com/in/aman-mittal-22833b288/ -->
+    
+    <h1>Check your BMI</h1>
+    <h4>Enter your weight and height below to check your BMI results</h4>
+    <h4>Put your weight here in (<b>KG</b>)</h4>
+    <input type="number" id="weight" placeholder="Enter weight in KG's">
+    <h4>Put your height here in (<b>CM</b>)</h4>
+    <input type="number" id ="height" placeholder="Enter height in CM's">
+    <br>
+    <button onclick="result()">Calculate BMI</button>
+    <h2 id="result">Result..........</h2>
+</body>
+<script>
+    
+       function result(){
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+        let heightsqr = height*height;
+        let bmi = weight / heightsqr;
+        let realbmi = bmi * 10000;
+        if (realbmi <= 18.4){
+            document.getElementById("result").innerHTML = "Your BMI is " + realbmi + " which means You are UnderWeight";
+        }
+        else if (realbmi >= 18.5 && realbmi <=24.9){
+            document.getElementById("result").innerHTML = "Your BMI is " + realbmi + " which means You are Normal Weight";
+        }
+        else if (realbmi >=25 && realbmi <= 29.9){
+            document.getElementById("result").innerHTML = "Your BMI is " + realbmi + " which means You are OverWeight";
+        }
+        else if(realbmi >=30) {
+            document.getElementById("result").innerHTML = "Your BMI is " + realbmi + " which means You are Obese";
+        }
+       }
+</script>
+</html>

@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Practise Selectors</title>
+  </head>
+  <!-- Code Author - Aman Mittal -->
+  <!-- Linkedin - https://www.linkedin.com/in/aman-mittal-22833b288/ -->
+  <body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr />
+    <button onClick="changeH1()">Change H1</button>
+    <button onClick="changeH3()">Change H3</button>
+    <button onClick="changeH5()">Change H5</button>
+    <button onClick="changeGreen()">Change Green</button>
+    <button onClick="changeRed()">Change Red</button>
+    <button onClick="changeBlue()">Change Blue</button>
+    <script>
+      function changeH1() {
+       let red = document.querySelector("h1").style.color = "red";
+      
+        // the colour of first <h1> should turn to red
+
+      }
+
+      function changeH3() {
+        let allh3 = document.querySelectorAll("h3");
+        for(let i =0 ; i < allh3.length; i++){
+          allh3[i].style.color = "green"
+        }
+        
+        // the colour of all <h3> should turn to green
+      }
+
+      function changeH5() {
+        let blue = document.querySelectorAll("h5");
+        for(let i = 0 ; i < blue.length; i++){
+          blue[i].style.color = "blue"
+        }
+        // the colour of all <h5> should turn to blue
+      }
+
+      function changeGreen() {
+        let classGreen = document.querySelectorAll(".green");
+        for(let i = 0 ; i < classGreen.length; i++){
+          classGreen[i].style.color = "green"
+        }
+        // all the elements with the class green should change to green
+      }
+
+      function changeRed() {
+        let classRed = document.querySelectorAll(".red");
+        for(let i = 0 ; i < classRed.length; i++){
+          classRed[i].style.color = "red"
+        }
+        
+        // all the elements with the class red should change to red
+      }
+
+      function changeBlue() {
+        let classBlue = document.querySelectorAll(".blue");
+        for(let i = 0 ; i < classBlue.length; i++){
+          classBlue[i].style.color = "blue"
+        }
+
+      }
+    </script>
+  </body>
+</html>

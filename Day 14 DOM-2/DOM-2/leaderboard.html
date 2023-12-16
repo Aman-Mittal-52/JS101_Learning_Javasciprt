@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            border:0px solid black;
+            width:30%;
+            height:auto;
+            margin:auto;
+            text-align:center;
+            box-shadow:rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            margin-top:15%;
+        }
+        .child{
+            border:0px solid black;
+            display:flex;
+            justify-content: space-between;
+        }
+        #min{
+            background-color:red;
+            width:20%;
+            padding: 20px;
+            font-size: 30px;
+            margin: 30px
+        }
+        #max{
+            background-color:green;
+            width:20%;
+            font-size:30px;
+            padding: 20px;
+            margin: 30px
+        }
+        #score{
+            background-color:rgb(118, 135, 136);
+            width:60%;
+            margin:auto;
+        }
+        .child2{
+            border:0px solid black;
+            padding: 40px;
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            margin: 30px;
+        }
+        button{
+            margin-right:5%;
+            margin-bottom:5%;
+            height:50px;
+            margin-left:5%;
+            border:none;
+        }
+    </style>
+</head>
+<!-- Code Author - Aman Mittal -->
+<!-- Linkedin - https://www.linkedin.com/in/aman-mittal-22833b288/ -->
+<body>
+    <div id="parent">
+        <div class="child">
+            <div id="min">
+                100
+            </div>
+            <div id="max">
+                200
+            </div>
+        </div>
+        <div id="score">
+        <h1 id="display">Score#</h1>
+        </div>
+        <div class="child2">
+            <button style="background-color: green;"><h2>1</h2></button>
+            <button style="background-color: rgb(238, 94, 41);"><h2>2</h2></button>
+            <button style="background-color: green;"><h2>3</h2></button>
+            <button style="background-color: rgb(238, 94, 41);"><h2>4</h2></button>
+            <button style="background-color: rgb(238, 94, 41);"><h2>5</h2></button>
+            <button style="background-color: rgb(238, 94, 41);"><h2>6</h2></button>
+            <button style="background-color: green;"><h2>7</h2></button>
+            <button style="background-color: rgb(238, 94, 41);"><h2>8</h2></button>
+            <button style="background-color: green;" ><h2>9</h2></button>
+            <button style="background-color: purple;color:white;"><h3>0</h3></button>
+        </div>
+         <button onclick="clicked()" style="background-color: black;color:white;width:50%;"><h2>Enter</h2></button>
+    </div>
+</body>
+<script>
+    let btn=document.querySelectorAll(".child2>button")
+    let bag="";
+    for(let i=0; i<btn.length; i++){
+        btn[i].addEventListener("click",function()
+        {
+            let display =document.getElementById("display")
+            bag+= btn[i].textContent
+            display.textContent = bag
+        })
+        function clicked(){
+            let min=document.getElementById("min")
+            let max=document.getElementById("max")
+            if(+bag < +min.textContent){
+                min.textContent=bag
+            }
+            else if(+bag > +max.textContent){
+                max.textContent=bag
+            }
+            let reset = document.getElementById("display")
+            reset.textContent="Score#";
+        }
+    }
+</script>
+</html>

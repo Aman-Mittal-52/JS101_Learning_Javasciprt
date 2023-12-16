@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>(My First) Calculator</title>
+  <link rel="icon"
+    href="https://static.vecteezy.com/system/resources/previews/018/817/822/original/cartoon-calculator-icon-png.png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppons', sans-serif;
+    }
+
+    h3 {
+      text-align: center;
+      font-family: "pop";
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      background-color: #00132d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 0px;
+    }
+
+    .calculator {
+      background: #00377e;
+      padding: 20px;
+      border-radius: 30px;
+    }
+
+    .calculator form input {
+      height: 60px;
+      width: 60px;
+      border-radius: 10px;
+      box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+      font-size: 20px;
+      border: 1px solid white;
+      background-color: #002657;
+      margin: 10px;
+    }
+
+    form .display {
+      display: flex;
+      justify-content: flex-end;
+      margin: 20px 0;
+    }
+
+    form .display input {
+      text-align: right;
+      flex: 1;
+      font-size: 45px;
+      box-shadow: none;
+
+    }
+
+    form input.equal {
+      width: 145px;
+      background-color: #00377e;
+    }
+
+    form input.operator {
+      color: #5390e0;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Code Author - Aman Mittal -->
+  <!-- Linkedin - https://www.linkedin.com/in/aman-mittal-22833b288/ -->
+  <div class="container ">
+    <div class="calculator">
+      <form>
+        <h3>Masai Calculator "By Aman"</h3>
+        <div class="display">
+          <input type="text" name="display">
+        </div>
+        <div>
+          <input type="button" value="AC" onclick="display.value = '' " class="operator">
+          <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)"
+            class="operator">
+          <input type="button" value="." onclick="display.value += '.' " class="operator">
+          <input type="button" value="/" onclick="display.value += '/' " class="operator">
+        </div>
+        <div>
+          <input type="button" value="7" onclick="display.value += '7' ">
+          <input type="button" value="8" onclick="display.value += '8' ">
+          <input type="button" value="9" onclick="display.value += '9' ">
+          <input type="button" value="*" onclick="display.value += '*' " class="operator">
+        </div>
+        <div>
+          <input type="button" value="4" onclick="display.value += '4' ">
+          <input type="button" value="5" onclick="display.value += '5' ">
+          <input type="button" value="6" onclick="display.value += '6' ">
+          <input type="button" value="-" onclick="display.value += '-' " class="operator">
+        </div>
+        <div>
+          <input type="button" value="1" onclick="display.value += '1' ">
+          <input type="button" value="2" onclick="display.value += '2' ">
+          <input type="button" value="3" onclick="display.value += '3' ">
+          <input type="button" value="+" onclick="display.value += '+' " class="operator">
+        </div>
+        <div>
+          <input type="button" value="00" onclick="display.value += '00' ">
+          <input type="button" value="0" onclick="display.value += '0' ">
+          <input type="button" value="=" onclick="display.value = eval(display.value)" class="equal operator">
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
