@@ -1,4 +1,4 @@
-function toLowerCase(array) {
+let toLowerCase = (array) => {
     let caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     let small = "abcdefghijklmnopqrstuvwxyz"
     let output = [];
