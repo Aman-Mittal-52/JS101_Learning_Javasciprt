@@ -28,12 +28,12 @@ I'm a full stack developer...
   - Day 11 --> Object Method
   - Day 12 --> Higher Order Functions (H.O.F)
   - Day 13 --> Document Object Model - 1 (DOM-1)
-  - Day 14 --> 
+  - Day 14 --> Document Object Model - 2 (DOM-2)
 
 ### Advanced Javascript
 
 #### Week 3
-  - Day 15 --> 
+  - Day 15 --> Document Object Model - 3 (DOM-3)
   - Day 16 --> 
   - Day 17 --> 
   - Day 18 --> 
