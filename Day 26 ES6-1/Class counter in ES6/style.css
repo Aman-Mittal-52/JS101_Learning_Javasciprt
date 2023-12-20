@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Nova+Square&family=Open+Sans&display=swap');
+
+#container {
+    width: 70%;
+    margin: auto;
+    margin-top: 60px;
+    padding: 60px;
+    border-radius: 40px;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Lexend', sans-serif;
+}
+
+.count {
+    display: flex;
+    justify-content: center;
+}
+
+.digit {
+    font-size: 150px;
+    font-weight: bold;
+    padding: 5px;
+    font-family: 'Lexend', sans-serif;
+    color: #fffFff;
+}
+
+.btn-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn {
+    padding: 18px 55px;
+    font-size: x-large;
+    margin: 0PX 30PX;
+    border-radius: 30px;
+    background-color: #0093E9;
+    border: NONE;
+    color: #ffff;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
+    background-color: gainsboro;
+}
+
+.btn:hover {
+    color: black;
+    scale: 1.1;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+}
