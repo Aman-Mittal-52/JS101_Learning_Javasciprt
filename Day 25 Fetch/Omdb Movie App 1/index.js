@@ -25,7 +25,7 @@ function showMovies() {
                             <h1>${Mydata.Title}</h1>
                             <div class="about">
                                 <div class="genre-year">
-                                    <h5>{Mydata.Genre}</h5>
+                                    <h5>${Mydata.Genre}</h5>
                                     <h5>${Mydata.Year}</h5>
                                 </div>
                                 <h6>${Mydata.Rated}</h6>
