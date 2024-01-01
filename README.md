@@ -48,7 +48,19 @@ I'm a full stack developer...
   - Day 25 --> Fetch (API)
   - Day 26 --> ES6-1
   - Day 27 --> Fetch II (API)
-  - Day 28 --> Revision III
+  - Day 28 --> Practice assignment - ( optional )
+
+### Advanced (Network) Javascript
+
+#### Week 5
+  - Day 29 --> Revision III
+  - Day 29 --> Revision III
+  - Day 29 --> Revision III
+  - Day 29 --> Revision III
+  - Day 29 --> Revision III
+  - Day 29 --> Revision III
+  - Day 29 --> Revision III
+
 
 ## Support
 
