@@ -45,10 +45,10 @@ I'm a full stack developer...
   - Day 22 --> 
   - Day 23 --> Async Programming
   - Day 24 --> Promises
-  - Day 25 --> Fetch(API)
+  - Day 25 --> Fetch (API)
   - Day 26 --> ES6-1
-  - Day 27 --> 
-  - Day 28 -->  
+  - Day 27 --> Fetch II (API)
+  - Day 28 --> Revision III
 
 ## Support
 
