@@ -23,3 +23,6 @@ function GoodString(N, str) {
       console.log("good")
   }
 }
+
+
+GoodString(4, "Aman")
