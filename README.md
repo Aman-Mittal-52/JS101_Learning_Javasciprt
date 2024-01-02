@@ -34,8 +34,8 @@ I'm a full stack developer...
 
 #### Week 3
   - Day 15 --> Document Object Model - 3 (DOM-3)
-  - Day 16 --> 
-  - Day 17 --> 
+  - Day 16 --> Mock Evaluation
+  - Day 17 --> Evaluation
   - Day 18 --> 
   - Day 19 --> 
   - Day 20 --> 
