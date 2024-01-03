@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Author(name, birthYear, nationality) {
+            this.name = name;
+            this.birthYear = birthYear;
+            this.nationality = nationality;
+        }
+        function Book(title, Author, genre, price) {
+            this.title = title;
+            this.Author = Author
+            this.genre = genre;
+            this.price = price;
+        }
+        Book.prototype.getBookInfo = function () {
+            document.getElementById("a").innerText = `${this.title} , ${this.Author.nationality} ${this.Author},${this.price}`
+        }
+        let Author1 = new Author("aman", 2721, "NEW India")
+        let book1 = new Book("aman And Riya", Author1, 1, "$11")
+
+    </script>
+</body>
+
+</html>
