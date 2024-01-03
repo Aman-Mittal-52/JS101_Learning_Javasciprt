@@ -53,13 +53,13 @@ I'm a full stack developer...
 ### Advanced (Network) Javascript
 
 #### Week 5
-  - Day 29 --> Revision III
-  - Day 29 --> Revision III
-  - Day 29 --> Revision III
-  - Day 29 --> Revision III
-  - Day 29 --> Revision III
-  - Day 29 --> Revision III
-  - Day 29 --> Revision III
+  - Day 29 --> Revision II
+  - Day 30 --> Mock Evaluation
+  - Day 31 --> ES6 II
+  - Day 32 --> Debouncing & Throttling
+  - Day 33 --> Evaluation
+  - Day 34 --> Revision III
+  - Day 35 --> 
 
 
 ## Support
