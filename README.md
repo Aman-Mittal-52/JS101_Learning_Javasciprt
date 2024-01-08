@@ -11,6 +11,8 @@ Welcome to **JS101 Learning Javascript**, an immersive and meticulously crafted 
 ## 🚀 About Me
 I'm a full stack developer...
 
+## Module - I
+
 ### Basic Javascript
 #### Week 1 
   - Day 1 -->  Programs of Introduction to JS(variables)
@@ -60,6 +62,8 @@ I'm a full stack developer...
   - Day 33 --> Evaluation
   - Day 34 --> Revision III
   - Day 35 --> Portfolio
+
+## Module - II
 
 ### React ( Library ) Advanced Javascript
 
