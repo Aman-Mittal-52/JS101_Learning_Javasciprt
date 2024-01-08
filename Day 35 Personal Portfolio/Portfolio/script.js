@@ -5,7 +5,7 @@ themeBtn.addEventListener("click", () => {
     if (!oneThemeBtn) {
         document.body.style.color = "white"
         document.body.style.backgroundColor = "black"
-        themeBtn.src = "../ImagesUsesd/Dark theme/sun.png"
+        themeBtn.src = "../ImagesUsesd/Dark theme/sun.png"        
     }
     else {
         document.body.style.color = "black"
