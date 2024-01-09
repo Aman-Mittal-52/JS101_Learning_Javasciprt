@@ -1,17 +1,21 @@
 let themeBtn = document.querySelector("#theme > img");
+let resumeBtn = document.getElementById("resumeBtn");
 let oneThemeBtn = false;
 
 themeBtn.addEventListener("click", () => {
     if (!oneThemeBtn) {
-        document.body.style.color = "white"
-        document.body.style.backgroundColor = "black"
-        themeBtn.src = "../ImagesUsesd/Dark theme/sun.png"        
+        resumeBtn.style.backgroundColor = "black";
+        resumeBtn.style.color = "white";
+        document.body.style.color = "white";
+        document.body.style.backgroundColor = "black";
+        themeBtn.src = "./ImagesUsed/Dark Theme/sun.png";
+    } else {
+        document.body.style.color = "black";
+        document.body.style.backgroundColor = "white";
+        themeBtn.src = "./ImagesUsed/Dark Theme/moon.png";
+        resumeBtn.style.backgroundColor = "white";
+        resumeBtn.style.color = "black";
     }
-    else {
-        document.body.style.color = "black"
-        document.body.style.backgroundColor = "white"
-        themeBtn.src = "../ImagesUsesd/Dark theme/moon.png"
-    };
     oneThemeBtn = !oneThemeBtn;
 });
 
@@ -23,7 +27,7 @@ function navAnimation() {
                 y: -100,
                 duration: 1,
             });
-        }, i * 50);
+        }, (i+1) * 100);
     }
 }
 
@@ -63,16 +67,17 @@ timeline.to("#home > h1:nth-child(3)", {
         }, 1000);
     }
 });
-timeline.to("#home > h1:last-child", {
-    y: -35,
-    x: -5
-})
 timeline.to("#home > h1:nth-child(1)", {
     y: -60,
     onComplete: () => {
         textAnimation = true;
     }
 })
+timeline.to("#home > h1:last-child", {
+    y: -35,
+    x: -5
+})
+
 
 let LoopGSAP = gsap.from("#text", {
     opacity: 0,
@@ -82,10 +87,18 @@ let LoopGSAP = gsap.from("#text", {
 
 function typeAnimation() {
     let typed = new Typed("#text", {
-        strings: ["Web 3", "React", "", "Javascript", "Python"],
-        typeSpeed: 150,
-        backSpeed: 250,
+        strings: ["Web 3", "React", "NodeJS", "Javascript", "Python", "FrontEnd"],
+        typeSpeed: 250,
+        backSpeed: 150,
         loop: true,
         showCursor: false
     });
 }
+
+
+gsap.from("#resumeBtn",{
+    duration:2,
+    opacity:0,
+    delay:5,
+    filter: "blur(20px)"
+})
