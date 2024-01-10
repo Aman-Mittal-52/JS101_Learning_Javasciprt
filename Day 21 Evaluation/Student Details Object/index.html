@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Report Card</title>
+</head>
+<body>
+    <style>
+        h1{
+            width: 80%;
+            margin: 100px auto;           
+        }
+    </style>
+    <h1>result...</h1>
+<script>
+    function StudentReport(name, rollNo, classof, section, science, Ssc, maths, english, hindi) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.classof = classof;
+        this.section = section;
+        this.science = science;
+        this.Ssc = Ssc;
+        this.maths = maths;
+        this.english = english;
+        this.hindi = hindi;
+
+        this.Percentage = function () {
+            return ((this.science + this.Ssc + this.maths + this.english + this.hindi) / 5);
+        };
+
+        this.printReport = function () {
+            let result = document.querySelector("h1");
+            result.innerText = `+--------------------+
+|     REPORT CARD    |
++--------------------+
+| Name     - ${this.name} |
+| Roll no. - ${this.rollNo} |
+| Class    - ${this.classof} |
+| Section  - ${this.section} |
+| Science  - ${this.science} |
+| S.Sc     - ${this.Ssc} |
+| Maths    - ${this.maths} |
+| English  - ${this.english} |
+| Hindi    - ${this.hindi} |
+| Percentage - ${this.Percentage()}% |
++--------------------+`
+        };
+    }
+    const AmanReport = new StudentReport("Aman",88, "XII", "A", 100, 100,100, 100, 100);
+
+    AmanReport.printReport();
+</script>
+
+</body>
+</html>
