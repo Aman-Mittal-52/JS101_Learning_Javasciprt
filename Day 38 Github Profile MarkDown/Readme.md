@@ -11,15 +11,15 @@
 # Connect with me<img src="https://github.com/Aman-Mittal-52/JS101_Learning_Javasciprt/blob/main/Day%2038%20Github%20Profile%20MarkDown/assets/Handshake.gif?raw=true" height="32px">
 
 <a href="https://www.linkedin.com/in/aman-mittal-22833b288/">
-    <img align="left" alt="Aman Mittal | Linkedin" width="24px" src="https://raw.githubusercontent.com/Aman-Mittal-52/JS101_Learning_Javasciprt/0bff9432a7b70910d3f292a12cdab52cb2dfc074/Day%2038%20Github%20Profile%20MarkDown/assets/Linkedin.svg" />
+    <img align="left" alt="Aman Mittal | Linkedin" width="24px" src="https://raw.githubusercontent.com/Aman-Mittal-52/JS101_Learning_Javasciprt/ba96dfe71be7665afd57caa74937f151bcc343d4/Day%2038%20Github%20Profile%20MarkDown/assets/Linkedin.svg" />
 </a> &nbsp;&nbsp;
 
 <a href="https://www.instagram.com/code_with_aman.js/">
-    <img align="left" alt="Aman Mittal | Instagram" width="24px" src="https://raw.githubusercontent.com/Aman-Mittal-52/JS101_Learning_Javasciprt/0bff9432a7b70910d3f292a12cdab52cb2dfc074/Day%2038%20Github%20Profile%20MarkDown/assets/Instagram.svg" />
+    <img align="left" alt="Aman Mittal | Instagram" width="24px" src="https://raw.githubusercontent.com/Aman-Mittal-52/JS101_Learning_Javasciprt/ba96dfe71be7665afd57caa74937f151bcc343d4/Day%2038%20Github%20Profile%20MarkDown/assets/Instagram.svg" />
 </a> &nbsp;&nbsp;
 
 <a href="mailto:Amanmittle1234@gmail.com">
-    <img align="left" alt="Aman Mittal | Gmail" width="26px" src="https://raw.githubusercontent.com/Aman-Mittal-52/JS101_Learning_Javasciprt/0bff9432a7b70910d3f292a12cdab52cb2dfc074/Day%2038%20Github%20Profile%20MarkDown/assets/Gmail.svg" />
+    <img align="left" alt="Aman Mittal | Gmail" width="26px" src="https://raw.githubusercontent.com/Aman-Mittal-52/JS101_Learning_Javasciprt/ba96dfe71be7665afd57caa74937f151bcc343d4/Day%2038%20Github%20Profile%20MarkDown/assets/Gmail.svg" />
 </a>
 
 <br><br>
