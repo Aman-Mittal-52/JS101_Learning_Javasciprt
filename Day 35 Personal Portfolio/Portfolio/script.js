@@ -88,7 +88,7 @@ let LoopGSAP = gsap.from("#text", {
 function typeAnimation() {
     let typed = new Typed("#text", {
         strings: ["Web 3", "React", "NodeJS", "Javascript", "Python", "FrontEnd"],
-        typeSpeed: 250,
+        typeSpeed: 150,
         backSpeed: 150,
         loop: true,
         showCursor: false
@@ -102,3 +102,49 @@ gsap.from("#resumeBtn",{
     delay:5,
     filter: "blur(20px)"
 })
+
+
+
+let element = <>
+  <button id="resumeBtn">Resume</button>
+  <div id="container">
+    <div id="nav">
+      <div id="logo">
+        <h1>Aman</h1>
+      </div>
+      <div id="features">
+        <h3 className="navText">Home</h3>
+        <h3 className="navText">About</h3>
+        <h3 className="navText">Skills</h3>
+        <h3 className="navText">Projects</h3>
+        <h3 className="navText">Contact</h3>
+        <h3 className="navText">Resume</h3>
+      </div>
+      <div id="theme">
+        <img src="./ImagesUsed/Dark Theme/moon.png" alt="" />
+      </div>
+    </div>
+    <hr />
+    <div id="intro">
+      <div id="home">
+        <h1>I'm a</h1>
+        <h2 id="text" />
+        <h1>Web</h1>
+        <h1>Developer</h1>
+      </div>
+      <div id="picture">
+        <img src="./ImagesUsed/MyImg/pattern.png" alt="background" />
+        <img src="./ImagesUsed/MyImg/My Pic.png" alt="mine" />
+        <h3 id="text" />
+      </div>
+    </div>
+  </div>
+</>
+
+let mainElement = React.createElement("div",{},element)
+
+let rootElement = document.getElementById("root");
+
+let root = ReactDOM.createRoot(rootElement)
+
+root.render(mainElement)
