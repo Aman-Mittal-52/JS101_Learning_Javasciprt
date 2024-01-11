@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Template</title>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // My Code goes here;
+
+    function app() {
+        const navElement = React.createElement("div", {
+            id: "navbar",
+            children: <>
+                <p>navbar</p>
+                <p>links will be displayed here</p>
+            </>
+        });
+        const mainElement = React.createElement("div", {
+            id: "wrapper",
+            children: <div>
+                <p>main content</p>
+            </div>
+        });
+        const footerElement = React.createElement("div", {
+            id: "footer",
+            children: <div>
+                <p>footer</p>
+            </div>
+        });
+    }
+
+
+    function navbar(){
+        return (
+                <div>
+                </div>
+            )    
+    }
+    // JSX
+
+
+    const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+
+    rootElement.render(element)
+</script>
+
+</html>
