@@ -7,18 +7,18 @@
 
 <img align="right" alt="GIF" src="https://media.giphy.com/media/iIqmM5tTjmpOB9mpbn/giphy.gif" />
 
-# Connect with me<img src="https://github.com/SatYu26/SatYu26/blob/master/Assets/Handshake.gif" height="32px">
+# Connect with me<img src="https://github.com/Aman-Mittal-52/JS101_Learning_Javasciprt/blob/main/Day%2038%20Github%20submission/assets/Handshake.gif?raw=true" height="32px">
 
 <a href="https://www.linkedin.com/in/aman-mittal-22833b288/">
-    <img align="left" alt="Aman Mittal | Linkedin" width="24px" src="https://github.com/SatYu26/SatYu26/blob/master/Assets/Linkedin.svg" />
+    <img align="left" alt="Aman Mittal | Linkedin" width="24px" src="https://raw.githubusercontent.com/Aman-Mittal-52/JS101_Learning_Javasciprt/0bff9432a7b70910d3f292a12cdab52cb2dfc074/Day%2038%20Github%20submission/assets/Linkedin.svg" />
 </a> &nbsp;&nbsp;
 
-<a href="https://www.instagram.com/abhityagi2912/">
-    <img align="left" alt="Aman Mittal | Instagram" width="24px" src="https://github.com/SatYu26/SatYu26/blob/master/Assets/Instagram.svg" />
+<a href="https://www.instagram.com/code_with_aman.js/">
+    <img align="left" alt="Aman Mittal | Instagram" width="24px" src="https://raw.githubusercontent.com/Aman-Mittal-52/JS101_Learning_Javasciprt/0bff9432a7b70910d3f292a12cdab52cb2dfc074/Day%2038%20Github%20submission/assets/Instagram.svg" />
 </a> &nbsp;&nbsp;
 
 <a href="mailto:Amanmittle1234@gmail.com">
-    <img align="left" alt="Aman Mittal | Gmail" width="26px" src="https://github.com/SatYu26/SatYu26/blob/master/Assets/Gmail.svg" />
+    <img align="left" alt="Aman Mittal | Gmail" width="26px" src="https://raw.githubusercontent.com/Aman-Mittal-52/JS101_Learning_Javasciprt/0bff9432a7b70910d3f292a12cdab52cb2dfc074/Day%2038%20Github%20submission/assets/Gmail.svg" />
 </a>
 
 <br><br>
