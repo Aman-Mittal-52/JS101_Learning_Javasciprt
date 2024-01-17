@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Author: Aman MIttal -->
+    <title>Rendering Multiple Tags</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script>
+        // code
+        let rootDiv = document.getElementById("root");
+
+        // Syntax 1
+        let element1 = React.createElement('h1',{
+            className : "myQuote",
+            children : "Chips maang raha hai",
+        });
+
+        // Syntax 2
+        let element2 = React.createElement('h1',{
+            className : "myQuote",
+        }, "Yeh Sab toh Khene ki Baate hoti hai" );
+
+
+        let divElement = React.createElement("div",{
+            className : "MainDiv",
+            children : [element1 , element2]
+        });
+
+        let rootElement = ReactDOM.createRoot(rootDiv);
+        rootElement.render(element1) // Didn't Render this
+        rootElement.render(element2) // Didn't Render this also
+        rootElement.render(divElement) //Both should be visible
+    </script>
+  </body>
+</html>
+
