@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Babel intro</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://www.unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <!-- Babel -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel"> //Type should be mentioned
+        let element = (
+            <div className="wrapper">
+                <p id="quote">Carpe Diem</p>
+                <p>Seize the day</p>
+                <div>
+                    <p>
+                        This is <span>Sparta</span>
+                    </p>
+                </div>
+            </div>
+        )
+        let rootDiv = document.getElementById("root");
+        let rootElement = ReactDOM.createRoot(rootDiv);
+        rootElement.render(element)
+
+        // let rootDiv = document.getElementById("root");
+        // let rootElement = ReactDOM.createRoot(rootDiv);
+        // rootElement.render(rootDiv)
+    </script>
+</body>
+
+</html>
