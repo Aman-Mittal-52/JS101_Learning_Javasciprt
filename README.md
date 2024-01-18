@@ -6,7 +6,7 @@ Welcome to **JS101 Learning Javascript**, an immersive and meticulously crafted 
 **Author**
 
 - [GitHub --> @Aman-Mittal-52](https://www.github.com/Aman-Mittal-52)
-- [Linkdin](https://www.linkedin.com/in/aman-mittal-22833b288/)
+- [Linkedin](https://www.linkedin.com/in/aman-mittal-22833b288/)
 
 ## 🚀 About Me
 I'm a full stack developer...
@@ -38,13 +38,13 @@ I'm a full stack developer...
   - Day 15 --> Document Object Model - 3 (DOM-3)
   - Day 16 --> Mock Evaluation
   - Day 17 --> Evaluation
-  - Day 18 --> 
-  - Day 19 --> 
-  - Day 20 --> 
-  - Day 21 -->
+  - Day 18 --> Construck Week (Project)
+  - Day 19 --> Construct Function
+  - Day 20 --> Prototype & Inheritence
+  - Day 21 --> Evaluation
 
 #### Week 4
-  - Day 22 --> 
+  - Day 22 --> Function Tricks
   - Day 23 --> Async Programming
   - Day 24 --> Promises
   - Day 25 --> Fetch (API)
@@ -69,7 +69,11 @@ I'm a full stack developer...
 
 #### Week 6
   - Day 36 --> Getting Started With React I
+  - Day 37 --> React II
+  - Day 38 --> GitHub Profile Upgrade
+  - Day 39 --> React III
 
+  
 ## Support
 
 For support, E-mail --> amanmittle1234@gmail.com

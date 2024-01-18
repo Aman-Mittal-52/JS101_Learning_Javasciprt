@@ -21,15 +21,15 @@
         console.log("button clicked...");
     }
 
+    let innerH3 = React.createElement("h3",{},"Learning React")
+    let innerP_Tag = React.createElement("p",{},"Day 2")
+    let innerButton = React.createElement("button",{onClick : clicked},"Click Me")
+    
     // JSX
     const element = React.createElement("div", {
         id: "container",
         className: "main",
-        children: <>
-            <h3>Learning React</h3>
-            <p>Day 2</p>
-            <button onClick={clicked}>Click me</button>
-        </>
+        children: [innerH3,innerP_Tag,innerButton]
     })
 
 
