@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JSX and Babel</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your JSX code here
+
+    // True Quote
+    let trueQuote = "Seize the day";
+
+    // False Quote
+    let falseQuote = "Make the most of it";
+
+    // Condition
+    let isTrue = false;
+
+    // App Component
+    function App(){
+        return (
+            <p>{isTrue? trueQuote : falseQuote}</p>
+        )
+    }
+    
+    // This is the Basic Syntax to *Catch* the HTML elements into JS
+    let root = document.getElementById("root");
+
+    // Creata ReactDOM root for rendering the Data...!!
+    const reactRoot = ReactDOM.createRoot(root);
+    
+    // Final Render the all components 
+    //By invoking the function
+
+    // Syntax :
+    // 1. <App /> This is JSX Syntax to invoke component function
+    // 2. {App()} This is JSX Syntax to invoke `Any Function`
+    reactRoot.render(<App />) 
+  </script>
+</body>
+</html>

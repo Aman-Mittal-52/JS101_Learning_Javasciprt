@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fragment Wrapper</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your task starts here
+
+    function MyComponent() {
+        const showAlert = () => {
+            alert('Hello');
+        };
+
+        return (
+            <>
+                <p>React is a javascript library</p>
+                <div className="main">
+                    <p>Click the below button to alert 'Hello'</p>
+                    <button onClick={showAlert}>Alert Hello</button>
+                </div>
+            </>
+        );
+    } 
+    
+    // This is the Basic Syntax to *Catch* the HTML elements into JS
+    let root = document.getElementById("root");
+
+    // Step 5: Create ReactDOM root for rendering the Data...!!
+    const reactRoot = ReactDOM.createRoot(root);
+
+    // Step 6: Final Render the all components 
+    // By invoking the function
+    // Syntax :
+    // 1. <App /> This is JSX Syntax to invoke component function
+    // 2. {App()} This is JSX Syntax to invoke `Any Function`
+    reactRoot.render(<MyComponent />);
+  </script>
+</html>
