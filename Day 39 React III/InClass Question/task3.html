@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nala Supara BAnk</title>
+    <title>State  Upliftment</title>
   </head>
   <body>
     <div id="root">
@@ -14,12 +14,26 @@
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
     // My Code goes here;
-    function App(){
-        
+
+    function Counter({count ,setCount}){
+      return <div>
+        <h3>Count : {count} </h3>
+        <button onClick={()=>{setCount(++count)}}>Click to Increment</button>
+        </div>
+      }
+      function App(){
+        let [count , setCount] = React.useState(50)
+        return( <>
+                  <Counter count={count} setCount={setCount}/>
+                  <Counter count={count} setCount={setCount}/>
+                  <Counter count={count} setCount={setCount}/>
+                  <Counter count={count} setCount={setCount}/>
+                  <Counter count={count} setCount={setCount}/>
+              </>)
     }
     // JSX
     const rootElement = ReactDOM.createRoot(document.getElementById("root")); 
-    rootElement.render(<Counter />)
+    rootElement.render(<App />)
   </script>
 </html>
 

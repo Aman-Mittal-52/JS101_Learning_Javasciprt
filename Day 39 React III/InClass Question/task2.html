@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nala Supara BAnk</title>
+    <title>Nala Supara Bank</title>
   </head>
   <body>
     <div id="root">
@@ -15,10 +15,10 @@
   <script type="text/babel">
     // My Code goes here;
     function Counter(){
-        const [count , funcCount] = React.useState(30);
+        const [count , setCount] = React.useState(30);
         const [balance , setBalance] = React.useState(3000)
         function clicked() {
-            funcCount(45)
+            setCount(45)
         }
         return (
             <>

@@ -3,35 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React Template</title>
+    <title>Boilerplate Code</title>
   </head>
   <body>
-    <div id="root">
-    </div>
+    <div id="root"></div>
   </body>
   <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
   <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   <script type="text/babel">
-    // My Code goes here;
-    function Counter(){
-        const [count , setCount] = React.useState(30);
-        function clicked() {
-            setCount(45)
-        }
-        return (
-            <>
-               <p>count : {count}</p>
-            <button onClick={clicked}>Increment</button>
-            </>
-            )
+    // Code goes here
+    function CricketScoreboard(abc){
+        return (<div>
+                    <h1>{abc.name}</h1>
+                    <div>Aman</div>
+                    <h2>Bubu</h2>
+                    <h1 style={{fontSize:"70px"}}>Aman</h1>
+                </div>)
     }
-    // JSX
-
 
     const rootElement = ReactDOM.createRoot(document.getElementById("root"));
-    
-    rootElement.render(<Counter />)
-  </script>
-</html>
 
+    rootElement.render(<CricketScoreboard name={"amaAmandkaedfs"}/>)
+  </script>
+</html> 
