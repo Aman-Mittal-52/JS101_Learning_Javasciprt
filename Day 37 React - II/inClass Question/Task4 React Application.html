@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Template</title>
+    <style>
+        body>*{
+                padding: 40px;
+        }
+
+        #navbar {
+            background-color: brown;            
+            display: flex;
+            >img{
+                width: 200px;
+            }
+            >div{
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+            }
+        }
+
+        #main{
+            background-color: rgb(160, 137, 142);    
+            display: flex;
+        }
+        
+        #sidebar{
+            flex: 3;
+            background-color: rgb(47, 230, 14);width: 30%;
+        }
+        #product{
+            flex: 2;
+            background-color: rgb(204, 233, 19);
+            width: 70%;
+        }
+
+        #footer{
+            background-color: aqua
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+    </div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // My Code goes here;
+
+    function Navbar(){
+        return <div id="navbar">
+                    <img src="https://th.bing.com/th/id/OIP.OKq-BhPE8XlFzuQDJ6w2fgHaCe?rs=1&pid=ImgDetMain" alt="logo" />
+                    <div>
+                        <span>about</span>
+                        <span>contact</span>
+                        <span>login</span>
+                        <span>logout</span>
+                        <span>products</span>
+                    </div>
+                </div>
+    };
+
+    function Main(){
+        return (<div id="main">
+                    <div id="sidebar">
+                        <p>sidebar</p>
+                        <p>home</p>
+                        <p>explore</p>
+                        <p>Categories</p>
+                    </div>
+                    <div id="product">
+                        <p>product Items</p>
+                    </div>
+                </div>)
+    }
+
+    function Footer (){
+        return (
+            <div id="footer">
+                <p>Footer</p>    
+            </div>
+        )
+    }
+
+    function App(){
+        return  <>
+                    <Navbar />
+                    <Main />
+                    <Footer />
+                </>
+    } ;
+    
+    const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+
+    rootElement.render(<App />)
+</script>
+
+</html>

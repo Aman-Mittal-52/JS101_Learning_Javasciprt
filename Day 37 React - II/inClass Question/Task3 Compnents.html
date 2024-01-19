@@ -17,11 +17,38 @@
 <script type="text/babel">
     // My Code goes here;
 
-   
+    function Navbar(){
+        return <div id="navbar">
+                    <p>navbar</p>
+                    <p>links will be displayed here</p>
+                </div>
+    };
 
+    function Main(){
+        return (<>
+                    <p>main content</p>
+                </>)
+    }
+
+    function Footer (){
+        return (
+            <div id="footer">
+                <p>Footer</p>    
+            </div>
+        )
+    }
+
+    function App(){
+        return  <>
+                    <Navbar />
+                    <Main />
+                    <Footer />
+                </>
+    } ;
+    
     const rootElement = ReactDOM.createRoot(document.getElementById("root"));
 
-    rootElement.render(element)
+    rootElement.render(<App />)
 </script>
 
 </html>
