@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React Template</title>
     <style>
-        body>*{
-                padding: 40px;
-        }
-
+        
         #navbar {
             background-color: brown;            
             display: flex;
@@ -24,20 +21,31 @@
         }
 
         #main{
+            height: 500px;
             background-color: rgb(160, 137, 142);    
             display: flex;
         }
-        
+
         #sidebar{
-            flex: 3;
+            flex: 2;
             background-color: rgb(47, 230, 14);width: 30%;
         }
         #product{
-            flex: 2;
+            flex: 5;
             background-color: rgb(204, 233, 19);
             width: 70%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 30px;
         }
 
+        .card{
+            width: 50%;
+            height: 100px;
+        }
+        .card img {
+            width: 200px;
+        }
         #footer{
             background-color: aqua
         }
@@ -67,6 +75,15 @@
                 </div>
     };
 
+    function Product(){
+        return (
+            <div className="card">
+                <img src="https://th.bing.com/th/id/OIP.DGDIHNVIZOinCwUN_xKQGwHaE8?rs=1&pid=ImgDetMain" alt="img" />
+                <p>product</p>
+                <h3>30ruppee</h3>
+            </div>
+        )
+    }
     function Main(){
         return (<div id="main">
                     <div id="sidebar">
@@ -77,6 +94,11 @@
                     </div>
                     <div id="product">
                         <p>product Items</p>
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
+                        <Product />
                     </div>
                 </div>)
     }
@@ -84,7 +106,12 @@
     function Footer (){
         return (
             <div id="footer">
-                <p>Footer</p>    
+                <p>Footer</p>
+                <a href="https://www.linkedin.com/in/aman-mittal-22833b288/">Linkedin</a> 
+                <br />
+                <br />
+                <br />
+                <a href="https://github.com/Aman-Mittal-52/">Github</a> 
             </div>
         )
     }
