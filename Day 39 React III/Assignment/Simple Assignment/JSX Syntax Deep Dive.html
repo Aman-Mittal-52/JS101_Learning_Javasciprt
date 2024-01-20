@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX ShowCase</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // My Code goes here;
+    let name = "Aman Mittal";
+    let isLoggedIn = true;
+    let Skills = ["Web Development", "ReactJS", "Creative"]
+    let newSkills = Skills.join(".....");
+
+    let info = {
+        todayDate : "20 Jan, 2024",
+        specialDay : "22 January",
+        reason : "Ram Mandir"
+    }
+    function JSXShowcase(){
+        return (
+            <div>
+                <details>{info.todayDate}</details>
+                <details>{info.specialDay}</details>
+                <details>{info.reason}</details>
+                <h1>{name}</h1>
+                <h1>Logged in : {isLoggedIn?"Yes" : "No"}</h1>
+                <h4>Skills : {newSkills}</h4>
+                <button onClick={()=>{alert("Aman Mittal")}}>Alert Button</button>
+            </div>
+        )
+    }
+    const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+    
+    rootElement.render(<JSXShowcase />)
+  </script>
+</html>
+

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX ShowCase</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        #root{
+            height: 100vh;
+        }
+        
+        #header{
+            width: 100vw;
+            height: 100px;
+            color: #fff;
+            background-color:royalblue ;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        #nav-content{
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+            align-items: center;
+            color: #fff;
+        }
+
+        #main{
+            width: 100vw;
+            height: calc(100vh - 200px);
+            display: flex;
+        }
+        
+        #sidebar{
+            flex: 1;
+            background-color: lightblue;
+            padding:60px 30px;
+            color: #fff;
+
+            >div{
+                color: black;
+                height:90%;
+                padding: 40px;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+        }
+        
+        #info{
+            flex: 3;
+            background-color: lightsalmon;
+            padding: 80px;
+
+            >h1{
+                text-align: center;
+                font-size: 50px;
+            }
+        }
+
+        #footer{
+            width: 100vw;
+            height: 100px;
+            text-align: center;
+            background-color: crimson;
+            padding: 0px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            >a{color: #fff;}
+        }
+
+        #imgBox{
+            width: 256px ;
+            height: 256px ;
+            margin:70px auto;
+            >img{
+                width: 100%;
+                height: 100%;
+            }
+
+            animation: rotate 50s linear;
+        }
+
+        #imgBox:hover img{
+            filter: drop-shadow(10px 10px 30px rgba(0, 1, 2, 0.3));
+        }
+
+        @keyframes rotate {
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // My Code goes here;
+
+    // Parent Component App()
+    function App(){
+        // Return Child Components
+        return (
+            <>
+                <Header/>
+                <Main/>
+                <Footer />
+            </>
+        )
+    }
+
+    // Header Component
+    function Header(){
+        // Header with basic styling
+        return (
+            <div id="header">
+                <h1>Aman</h1>
+                <div id="nav-content">
+                    <h3>Home</h3>
+                    <h3>Profile</h3>
+                    <h3>About</h3>
+                    <h3>Contact</h3>
+                </div>
+            </div>
+        )
+    }
+
+    // Main component
+    function Main(){
+        return (
+            <div id="main">
+                <Sidebar />
+                <Info />
+            </div>
+        )
+    }
+
+    // Main child component
+    function Sidebar(){
+        return (
+            <div id="sidebar">
+                <h1 style ={{textAlign:"center"}}>Menu</h1>
+                <div>
+                    <h4>Home</h4>
+                    <h4>Trending</h4>
+                    <h4>Sales</h4>
+                    <h4>Orders</h4>
+                    <h4>Support</h4>
+                    <h4>About Us</h4>
+                </div>
+                
+            </div>
+        )
+    }
+    
+    // Main child component
+    function Info(){
+        return (
+            <div id="info">
+                <h1>Web Developer</h1>
+                <div id="imgBox">
+                    <img src="https://cdn-icons-png.flaticon.com/256/10303/10303368.png" alt="react" />
+                </div>
+            </div>
+        )
+    }
+
+    // Footer Component 
+    function Footer(){
+        return (
+            <div id="footer">
+                <a href="https://www.linkedin.com/in/aman-mittal-22833b288/"><h3>LinkedIn</h3></a>
+                <a href="https://github.com/Aman-Mittal-52/"><h3>Github</h3></a>
+                <a href="https://www.linkedin.com/in/aman-mittal-22833b288/"><h3>LinkedIn</h3></a>
+            </div>
+        )
+    }
+
+
+    // This is the Basic Syntax to *Catch* the HTML elements into JS
+    let root = document.getElementById("root");
+
+    // Creata ReactDOM root for rendering the Data...!!
+    const reactRoot = ReactDOM.createRoot(root);
+    
+    // Final Render the all components 
+    //By invoking the function
+
+    // Syntax :
+    // 1. <App /> This is JSX Syntax to invoke component function
+    // 2. {App()} This is JSX Syntax to invoke `Any Function`
+    reactRoot.render(<App />)
+  </script>
+</html>
+
