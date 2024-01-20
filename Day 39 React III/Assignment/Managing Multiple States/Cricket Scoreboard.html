@@ -1,29 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boilerplate Code</title>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
-  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script type="text/babel">
-    // Code goes here
-    function CricketScoreboard(abc){
-        return (<div>
-                    <h1>{abc.name}</h1>
-                    <div>Aman</div>
-                    <h2>Bubu</h2>
-                    <h1 style={{fontSize:"70px"}}>Aman</h1>
-                </div>)
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boilerplate Code</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: 'poppins', sans-serif;
     }
 
-    const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+    #display {
+      height: 50vh;
+      width: 100vw;
+      font-size: 60px;
+      padding: 100px;
+      color: #fff;
+      background-color: royalblue;
+      display: flex;
+      justify-content: space-around;
+    }
 
-    rootElement.render(<CricketScoreboard name={"amaAmandkaedfs"}/>)
-  </script>
-</html> 
+    #Buttons {
+      width: 100vw;
+      height: 50vh;
+      color: #fff;
+      background-color: crimson;
+      display: flex;
+      justify-content: space-around;
+      padding: 100px;
+    }
+
+    .btn {
+      width: 20vw;
+      height: 15vh;
+      color: #fff;
+      font-size: 30px;
+      border-radius: 40px;
+      background-color: black;
+      border: 1px solid #fff;
+      border-bottom: 10px solid #fff;
+      border-right: 10px solid #fff;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    }
+
+    .btn:hover {
+      border-bottom: 5px solid #fff;
+      border-right: 5px solid #fff;
+      transform: translate(5px, 5px);
+      transition: all .3s ease-in-out;
+    }
+
+    .btn:active {
+      border-bottom: 1px solid #fff;
+      border-right: 1px solid #fff;
+      transform: translate(10px, 10px);
+      transition: all 0.01s ease;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+  // Code goes here
+
+  // Create a CricketScoreboard() component "This is the Parent component"
+  function CricketScoreboard() {
+
+    // State Uplifiting
+    // Declaring a useState() in `React` for `Runs` 
+    let [runs, setRuns] = React.useState(0)
+
+    // Declaring a useState() in `React` for `Wickets` 
+    let [wickets, setWickets] = React.useState(0)
+
+    // Create a Buttons() component for "Every single button"
+    function Buttons(props) {
+      return (
+        <button className="btn" onClick={() => {
+            if (wickets == 10) { // `When the buttons Clicks` It controlls to not increases the `Run` while clicking on it...
+              alert("You can't Increase runs now...Match was Finished..!!")
+            }
+            setRuns(wickets == 10 ? runs : runs += props.increment)
+          }}
+        >Increase runs by {props.increment}</button>
+      )
+    }
+
+    return (
+      <>
+        <div id="display">
+          <h1>Runs : {runs}</h1>
+          <h2>Wickets : {wickets}</h2>
+        </div>
+        <div id="Buttons">
+          <Buttons increment={4} />
+          <Buttons increment={8} />
+          <Buttons increment={3} />
+          <button className="btn" onClick={() => { wickets == 10 ? alert("Match was Finished..You scored : " + runs) : setWickets(++wickets) }}>Update Wicket</button>
+        </div>
+      </>
+      //  ⤤ Wicket button in the last 
+    ) 
+  }
+
+  // Creaing a reactRoot in ReactDOM
+  const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+  
+  // Rendering the CricketScoreboard component 
+  rootElement.render(<CricketScoreboard />)
+</script>
+
+</html>
