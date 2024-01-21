@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birthday Card</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'poppins' , sans-serif;
+        }
+        body,html{
+            width: 100vw;
+            height: 100vh;
+        }
+        body{
+            padding: 50px 100px;
+        }
+
+        #root{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        #card{
+            height: 60%;
+            color: #fff;
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            padding: 70px;
+            border-radius: 90px;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+        }
+
+        #nameBox{
+            width: 80%;
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: start;
+            align-items: end;
+            gap: 20px;
+            >h1{
+                font-size: 50px;
+            }
+            >h2{
+                font-size: 40px;
+                font-weight: 400;
+            }
+        }
+
+        #inputBtnBox{
+            padding: 20px;
+            width: 100%;
+            height: 35%;
+            border:2px solid #4158D0;
+            display: flex;
+            justify-content: space-between;
+            border-radius: 50px;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+        
+        #inputs{
+            width: 60%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            >input:nth-child(1){
+                width: 60%;
+            }
+            >input{
+                height: 40%;
+                font-size: 30px;
+                border-radius: 50px;
+                padding: 40px;
+            }
+        }
+
+        #button{
+            font-size:25px ;
+            width: 20%;
+            text-align: center;
+            padding-top: 80px;
+            color: #fff;
+            background-color: #000;
+            border-radius: 50px;
+            border-bottom:  15px solid #232323;
+            border-right: 15px solid #232323;
+        }
+        
+        #button:hover{
+            transition: transform 1s ease;
+            transform: translate(5px , 5px);
+            border-bottom:  10px solid #232323;
+            border-right: 10px solid #232323;
+        }
+
+        #button:active{
+            transition: transform 1s ease;
+            transform: translate(10px , 10px);
+            border-bottom:  5px solid #232323;
+            border-right: 5px solid #232323;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // My Code goes here;
+    
+    function getInfo(){
+        let name = document.getElementById("name");
+        let message = document.getElementById("message");
+        let displayName = document.getElementById("displayName");
+        let displayMessage = document.getElementById("displayMessage");
+
+        if(message.value == "" || name.value == ""){
+            alert("Please fill the required field..Happy Birthday 😊")
+        }else{
+            displayName.textContent = name.value
+            displayMessage.textContent = message.value
+        }
+
+        return obj;
+    }
+
+    function BirthdayCard(props){
+        
+        // props.recipientName = obj.name; 
+        // props.customMessage = obj.message; 
+        return (
+            <>
+                <div id="card">
+                    <div id="nameBox">
+                        <h2>Happy Birthday, </h2>
+                        <h1 id="displayName">{props.recipientName}</h1>
+                    </div>
+                    <h1 id="displayMessage">{props.customMessage}</h1>
+                </div>
+                <div id="inputBtnBox">
+                    <div id="inputs">
+                        <input type="text" id="name" placeholder="Please Enter your name"/>
+                        <br/>
+                        <input type="text" id="message" placeholder="Enter your message.........."/>
+                    </div>
+                    <div id="button" onClick={getInfo}>Make my card</div>
+                </div>
+            </>
+        )
+    }
+    const rootElement = ReactDOM.createRoot(document.getElementById("root"));
+    
+    rootElement.render(<BirthdayCard recipientName="Example" customMessage=" Example"/>)
+  </script>
+</html>
+
