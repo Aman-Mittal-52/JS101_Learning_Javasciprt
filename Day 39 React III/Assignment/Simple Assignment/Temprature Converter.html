@@ -1,0 +1,87 @@
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Converter</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 60px;
+            font-family: 'poppins' , sans-serif;
+        }
+        #root>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #celsius{
+            width: 100vw;
+            height: 50vh;
+            background-color: royalblue;
+        }
+        #fahrenheit{
+            width: 100vw;
+            height: 50vh;
+            background-color: crimson;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+      function TemperatureConverter() {
+
+        const [celsius, setCelsius] = React.useState();
+        const [fahrenheit, setFahrenheit] = React.useState();
+
+        const celsiusToFahrenheit = (celsius) => (celsius * 9) / 5 + 32;
+
+        const fahrenheitToCelsius = (fahrenheit) => ((fahrenheit - 32) * 5) / 9;
+
+        const handleCelsiusChange = (event) => {
+          const value = event.target.value;
+          setCelsius(value);
+          setFahrenheit(value === "" ? "" : celsiusToFahrenheit(parseFloat(value)).toFixed(2));
+        };
+
+        const handleFahrenheitChange = (event) => {
+          const value = event.target.value;
+          setFahrenheit(value);
+          setCelsius(value === "" ? "" : fahrenheitToCelsius(parseFloat(value)).toFixed(2));
+        };
+
+        return (
+          <>
+            <div id="celsius">
+                <label>
+                  Celsius:
+                  <input type="number" value={celsius} onChange={handleCelsiusChange} />
+                </label>
+            </div>
+            <div id="fahrenheit">
+                <label>
+                  Fahrenheit:
+                  <input type="number" value={fahrenheit} onChange={handleFahrenheitChange} />
+                </label>
+            </div>
+          </>
+        );
+      }
+
+      const root = document.getElementById("root");
+      const rootInstance = ReactDOM.createRoot(root);
+      rootInstance.render(<TemperatureConverter />);
+    </script>
+  </body>
+</html>
