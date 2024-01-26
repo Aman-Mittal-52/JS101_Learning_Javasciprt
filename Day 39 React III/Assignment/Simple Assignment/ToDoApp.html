@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boilerplate code</title>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+  <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+
+    function TodoApp() {
+      const [tasks, setTasks] = React.useState([]);
+
+      const addTask = (task) => {
+        setTasks([...tasks, task]);
+      };
+
+      const deleteTask = (index) => {
+        const updatedTasks = [...tasks];
+        updatedTasks.splice(index, 1);
+        setTasks(updatedTasks);
+      };
+
+      const markCompleted = (index) => {
+        const updatedTasks = [...tasks];
+        updatedTasks[index].completed = true;
+        setTasks(updatedTasks);
+      };
+
+      return (
+        <div>
+          <h1>Todo List</h1>
+          {}
+          <AddTodo addTask={addTask} />
+          {}
+          <TodoList tasks={tasks} deleteTask={deleteTask} markCompleted={markCompleted} />
+        </div>
+      );
+    }
+
+    function AddTodo({ addTask }) {
+      const [task, setTask] = React.useState('');
+
+      const handleChange = (event) => {
+        setTask(event.target.value);
+      };
+
+      const handleAdd = () => {
+        if (task.trim() !== '') {
+          addTask({ text: task, completed: false });
+          setTask('');
+        }
+      };
+
+      return (
+        <div>
+          <input type="text" value={task} onChange={handleChange} />
+          <button onClick={handleAdd}>Add</button>
+        </div>
+      );
+    }
+
+    function TodoList({ tasks, deleteTask, markCompleted }) {
+      return (
+        <div>
+            <ul>
+              {tasks.map((task, index) => (
+                <li key={index}>
+                  {task.text}
+                  {!task.completed && (
+                    <span>
+                      <button onClick={() => markCompleted(index)}>Mark Completed</button>
+                    </span>
+                  )}
+                  <button onClick={() => deleteTask(index)}>Delete</button>
+                </li>
+              ))}
+            </ul>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<TodoApp />, document.getElementById('root'));
+  </script>
+</html>
