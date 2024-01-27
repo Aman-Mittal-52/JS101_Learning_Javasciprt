@@ -1,0 +1,32 @@
+#root{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  width: 30%;
+  height: 500px;
+  margin: 100px auto;
+  background-color: royalblue;
+  text-align: center;
+}
+
+input{
+  margin: 50px 0px 0px;
+  font-size: 30px;
+  padding: 5px;
+}
+
+label{
+  font-size: 30px;
+  color: #fff;
+  >input{
+    margin: 0 50px;
+  }
+}
+
+select{
+  margin-top: 100px;
+  width: 50%;
+  font-size: 20px;
+}
