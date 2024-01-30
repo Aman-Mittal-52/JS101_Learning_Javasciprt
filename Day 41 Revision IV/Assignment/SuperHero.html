@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boilerplate Code</title>
+    <style>
+        body {
+            background: #000;
+        }
+
+        #root {
+            width: 70%;
+            margin: 50px auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 50px;
+            border-radius: 60px;
+            background: royalblue;
+        }
+
+        .card {
+            background: linear-gradient(white, wheat, red);
+            border-radius: 60px;
+            padding: 10px 20px;
+        }
+
+        .imgBox {
+            width: fit-content;
+            margin: auto;
+            padding: 16px;
+            background-color: #242424;
+            border-radius: 20px;
+            aspect-ratio: 1/1;
+            height: 250px;
+
+            >img {
+                width: 100%;
+                height: 100%;
+                border-radius: 20px;
+            }
+        }
+
+        @media all and (max-width:1000px) {
+            #root {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+</body>
+<script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+<script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    function App() {
+        const superheroes = [
+            {
+                name: "Batman",
+                powers: ["Rich", "Fly", "Genius"],
+                address: {
+                    street: "Gotham St",
+                    city: "Gotham",
+                    country: "USA",
+                },
+                age: 21,
+                isBachelor: true,
+                imageUrl:
+                    "https://rukminim2.flixcart.com/image/850/1000/poster/7/d/g/batman-portrait-bt455566-medium-original-imaekp86fhb3fhxf.jpeg"
+            },
+            {
+                name: "Superman",
+                powers: ["Laser Fry", "Fly", "Runs Fast"],
+                address: {
+                    street: "Central St",
+                    city: "New York",
+                    country: "USA",
+                },
+                age: 41,
+                isBachelor: false,
+                imageUrl:
+                    "https://c8.alamy.com/comp/2R7EMM0/portrait-of-a-drawing-of-superman-superhero-warner-dc-and-comics-concept-2R7EMM0.jpg"
+            },
+        ];
+
+        function SuperHEroCards(props) {
+            return (
+                <>
+                    {
+                        props.superheroes.map((ele) => {
+                            return (
+
+                                <div className='card'>
+                                    <div className="imgBox">
+                                        <img src={ele.imageUrl} alt="batman" />
+                                    </div>
+                                    <h1>{ele.name}</h1>
+                                    <h3>Age : {ele.age}</h3>
+                                    <h2>Powers</h2>
+                                    <ul>
+                                        {ele.powers.map((ele, ind) => {
+                                            return <li id={"listItem" + ind}>{ele}</li>
+                                        })}
+                                    </ul>
+                                </div>
+
+                            )
+                        })
+                    }
+                </>
+            )
+        }
+
+        return (
+            <>
+                <SuperHEroCards superheroes={superheroes} />
+            </>
+        )
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+</script>
+
+</html>
